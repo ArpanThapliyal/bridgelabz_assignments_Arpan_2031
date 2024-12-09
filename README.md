@@ -6,7 +6,8 @@
   - loops
   - string
   - array
-- functions (03-12-2024)  
+- functions (03-12-2024)
+- sets and maps (09-12-2024)
 
 ### ASSIGNMENTS :
 - assignment1 (02-12-2024)

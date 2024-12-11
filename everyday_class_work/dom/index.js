@@ -15,6 +15,7 @@ document.querySelectorAll("p");
 // ___________________________________________________________
 
 // updating :-
+
 let head = document.getElementById("heading");
 // getting tag's name using tagname
 head.tagName;
@@ -25,4 +26,7 @@ head.textContent; //(it will show the way it is written in html code
                   // with all the next line and tab spaces)
 //changing using innertext
 head.innerText;  //(it will show the way it will be printed in browser);            
+
+
+
 

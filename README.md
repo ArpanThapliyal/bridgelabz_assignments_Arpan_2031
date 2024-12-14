@@ -13,7 +13,7 @@
 
 ### ASSIGNMENTS :
 - assignment1 `(02-12-2024)`
-- assignment2 `(10-12-2024)`
+- assignment2 `(12-12-2024)`
 
 
 

@@ -205,15 +205,71 @@ function first100Primes() {
 // console.log(ans);
 
 // 30. function that will add two +ve numbers of indefinite size. The numbers will be strings and the result will also be string.
+   //1st way => function for fixed size 
 // function addString(str1,str2) {
 //     let n1 = Number.parseInt(str1); 
 //     let n2 = Number.parseInt(str2);
 //     console.log((n1+n2).toString());
 // }
-// let str1 = "1000"; 
-// let str2 = "5000";
-// addString(str1,str2);
+    //2nd way => function for infinite size
+//     function addLargeString(s1,s2){
+//         let i=s1.length-1;
+//         let j=s2.length-1;
+//         let str="" ;
+//         let carry=0;
+//         while(i>=0 || j>=0){
+//             let num ;
 
+//             if(i<0 && j<0) num=0;
+//             else if(i<0) num = 0+Number(s2[j]);
+//             else if(j<0) num = Number(s1[i])+0;
+//             else num = Number(s1[i])+Number(s2[j]);
+//             if(num>9 ||carry>0){
+//                 if(carry>0){
+//                     num+=carry;
+//                     carry=0;
+//                 }
+//                 str+=(num%10)+carry;
+//                 carry=parseInt(num/10);
+                
+//             }
+//             else{
+//                 str+=(num+carry);
+//                 carry=0;
+//             }
+//             i--;
+//             j--;
+//         }
+//         if(carry>0) str+=carry;
+//         return str;
+//     }
+// let str1 = "12345678982345345623456"; 
+// let str2 = "923456789034567899";
+// addString(str1,str2);
+// console.log(addLargeString(str1,str2).split("").reverse().join(""));
+
+// 31. Create a function that will return the number of words in a text
+// let str = "hello ji kese ho sare";
+// console.log(str.split(" ").length);
+
+// 32. function that will capitalize the first letter of each word in a text
+// let str = "hello ji kese ho sare";
+// function capital(arr){
+//     for(let i=0;i<arr.length;i++){
+//         arr[i] = arr[i].slice(0,1).toUpperCase()+arr[i].slice(1);
+//     }
+//     return arr.join(" ");
+// }
+// console.log(capital(str.split(" ")));
+
+//33. sum of numbers received in a comma delimited string 
+// const str = "1,2,3,4,5";
+// let sum=0;
+// let arr = str.split(",");
+// for(let i of arr){
+//    sum+= Number(i);
+// }
+// console.log(sum);
 
 
 

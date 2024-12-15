@@ -271,6 +271,35 @@ function first100Primes() {
 // }
 // console.log(sum);
 
+// 34. Function to return an array with words inside a text
+function getWordsFromText(text) {
+    return text.match(/\b\w+\b/g) || []; // Matches words and returns as an array
+}
+console.log(getWordsFromText("Hello, World! This is JavaScript.")); // ["Hello", "World", "This", "is", "JavaScript"]
+
+// 35. Function to convert a CSV text to a bi-dimensional array
+function csvToArray(csvText) {
+    return csvText.split('\n').map(row => row.split(','));
+}
+console.log(csvToArray("Name,Age,City\nJohn,25,New York\nJane,30,Los Angeles")); 
+
+// 36. Function to convert a string to an array of characters
+function stringToCharArray(str) {
+    return [...str]; // Uses spread operator to create an array of characters
+}
+console.log(stringToCharArray("JavaScript")); 
+
+// 37. Function to convert a string to an array containing the ASCII codes of each character
+function stringToAsciiArray(str) {
+    return str.split('').map(char => char.charCodeAt(0));
+}
+console.log(stringToAsciiArray("ABC")); 
+
+// 38. Function to convert an array containing ASCII codes into a string
+function asciiArrayToString(asciiArray) {
+    return asciiArray.map(code => String.fromCharCode(code)).join('');
+}
+console.log(asciiArrayToString([65, 66, 67]));
 
 
 

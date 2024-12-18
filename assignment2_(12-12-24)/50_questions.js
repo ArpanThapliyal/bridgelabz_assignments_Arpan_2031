@@ -272,34 +272,156 @@ function first100Primes() {
 // console.log(sum);
 
 // 34. Function to return an array with words inside a text
-function getWordsFromText(text) {
-    return text.match(/\b\w+\b/g) || []; // Matches words and returns as an array
-}
-console.log(getWordsFromText("Hello, World! This is JavaScript.")); // ["Hello", "World", "This", "is", "JavaScript"]
+// function getWordsFromText(text) {
+//     return text.match(/\b\w+\b/g) || []; 
+// }
+// console.log(getWordsFromText("Hello, World! This is JavaScript.")); // ["Hello", "World", "This", "is", "JavaScript"]
 
 // 35. Function to convert a CSV text to a bi-dimensional array
-function csvToArray(csvText) {
-    return csvText.split('\n').map(row => row.split(','));
-}
-console.log(csvToArray("Name,Age,City\nJohn,25,New York\nJane,30,Los Angeles")); 
+// function csvToArray(csvText) {
+//     return csvText.split('\n').map(row => row.split(','));
+// }
+// console.log(csvToArray("Name,Age,City\nJohn,25,New York\nJane,30,Los Angeles")); 
 
 // 36. Function to convert a string to an array of characters
-function stringToCharArray(str) {
-    return [...str]; // Uses spread operator to create an array of characters
-}
-console.log(stringToCharArray("JavaScript")); 
+// function stringToCharArray(str) {
+//     return [...str]; 
+// }
+// console.log(stringToCharArray("JavaScript")); 
 
 // 37. Function to convert a string to an array containing the ASCII codes of each character
-function stringToAsciiArray(str) {
-    return str.split('').map(char => char.charCodeAt(0));
-}
-console.log(stringToAsciiArray("ABC")); 
+// function stringToAsciiArray(str) {
+//     return str.split("").map(char => char.charCodeAt(0));
+// }
+// console.log(stringToAsciiArray("ABC")); 
 
 // 38. Function to convert an array containing ASCII codes into a string
-function asciiArrayToString(asciiArray) {
-    return asciiArray.map(code => String.fromCharCode(code)).join('');
-}
-console.log(asciiArrayToString([65, 66, 67]));
+// function asciiArrayToString(asciiArray) {
+//     return asciiArray.map(code => String.fromCharCode(code)).join('');
+// }
+// console.log(asciiArrayToString([65, 66, 67]));
+
+// 39. Implement the Caesar cypher
+// function caesarCipher(str, shift) {
+//     return str.replace(/[a-z]/gi, char => {
+//         const offset = char >= 'a' ? 97 : 65;
+//         return String.fromCharCode(((char.charCodeAt(0) - offset + shift) % 26) + offset);
+//     });
+// }
+// console.log(caesarCipher("Hello, World!", 3));
+
+// 40. Implement the bubble sort algorithm for an array of numbers
+// function bubbleSort(arr) {
+//     let len = arr.length;
+//     for (let i = 0; i < len; i++) {
+//         for (let j = 0; j < len - i - 1; j++) {
+//             if (arr[j] > arr[j + 1]) {
+//                 [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+//             }
+//         }
+//     }
+//     return arr;
+// }
+// console.log(bubbleSort([64, 34, 25, 12, 22, 11, 90]));
+
+// 41. Calculate the distance between two points (euclidean dist. formula)
+// function distanceBetweenPoints(x1, y1, x2, y2) {
+//     return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+// }
+// console.log(distanceBetweenPoints(1, 2, 4, 6));
+
+// 42. Check if two circles are intersecting
+// function areCirclesIntersecting(x1, y1, r1, x2, y2, r2) {
+//     const distance = distanceBetweenPoints(x1, y1, x2, y2);
+//     return distance <= r1 + r2;
+// }
+// console.log(areCirclesIntersecting(0, 0, 5, 8, 0, 5));
+
+// 43. Extract a column from a bi-dimensional array
+// function extractColumn(matrix, colIndex) {
+//     return matrix.map(row => row[colIndex]);
+// }
+// console.log(extractColumn([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 1));
+
+// 44. Convert a binary string to a number
+// function binaryToNumber(binaryStr) {
+//     return parseInt(binaryStr, 2);
+// }
+// console.log(binaryToNumber("1101"));
+
+// 45. Sum of all numbers in a jagged array
+// function sumJaggedArray(arr) {
+//     return arr.flat(Infinity).reduce((sum, num) => sum + num,0);
+// }
+// console.log(sumJaggedArray([1, [2, [3, 4]], 5]));
+
+// 46. Find the maximum number in a jagged array
+// function maxInJaggedArray(arr) {
+//     return Math.max(...arr.flat(Infinity));
+// }
+// console.log(maxInJaggedArray([1, [2, [99, 4]], 5]));
+
+// 47. Deep copy a jagged array
+// function deepCopyJaggedArray(arr) {
+//     return JSON.parse(JSON.stringify(arr));
+// }
+// console.log(deepCopyJaggedArray([1, [2, [3, 4]], 5]));
+
+// 48. Return the longest word in a string
+// function longestWord(str) {
+//     return str.split(/\W+/).reduce((longest, word) => word.length > longest.length ? word : longest, '');
+// }
+// console.log(longestWord("The quick brown fox jumps over the lazy dog"));
+
+// 49. Shuffle an array of strings
+// function shuffleArray(arr) {
+//     for (let i = arr.length - 1; i > 0; i--) {
+//         const j = Math.floor(Math.random() * (i + 1));
+//         console.log(j);
+//         [arr[i], arr[j]] = [arr[j], arr[i]];
+//     }
+//     return arr;
+// }
+// console.log(shuffleArray(["apple", "banana", "cherry", "date"]));
+
+// 50. Generate unique random numbers from 1 to n
+// function uniqueRandomNumbers(n) {
+//     const numbers = Array.from({ length: n }, (_, i) => i + 1);
+//     return shuffleArray(numbers);
+// }
+// console.log(uniqueRandomNumbers(10));
+
+// 51. Find the frequency of letters in a string
+// function letterFrequency(str) {
+//     const freq = {};
+//     str.replace(/[a-z]/gi, char => {
+//         freq[char] = (freq[char] || 0) + 1;
+//     });
+//     return Object.entries(freq);
+// }
+// console.log(letterFrequency("hello world"));
+
+// 52. Calculate Fibonacci(500) with high precision
+// function fibonacciHighPrecision(n) {
+//     let a = BigInt(0), b = BigInt(1);
+//     for (let i = 2; i <= n; i++) {
+//         [a, b] = [b, a + b];
+//     }
+//     return b.toString();
+// }
+// console.log(fibonacciHighPrecision(500));
+
+// 53. Calculate 70! with high precision
+// function factorialHighPrecision(n) {
+//     let result = BigInt(1);
+//     for (let i = 2; i <= n; i++) {
+//         result *= BigInt(i);
+//     }
+//     return result.toString();
+// }
+// console.log(factorialHighPrecision(70));
+
+
 
 
 

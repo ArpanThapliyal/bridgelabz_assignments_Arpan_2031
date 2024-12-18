@@ -9,7 +9,10 @@
 - functions `(03-12-2024)`
 - sets and maps `(09-12-2024)`
 - `11-12-2024`
-  - all the ways of doing traversal, insertion, deletion in array 
+  - all the ways of doing traversal, insertion, deletion in array
+- till `18-12-2024`
+  - stack quetions and implementation
+  - linked list implementation
 
 ### ASSIGNMENTS :
 - assignment1 `(02-12-2024)`

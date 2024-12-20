@@ -13,6 +13,9 @@
 - till `18-12-2024`
   - stack quetions and implementation
   - linked list implementation
+- till `20-12-2024`
+  - linked list quetions
+  - doubly linked list implementation  
 
 ### ASSIGNMENTS :
 - assignment1 `(02-12-2024)`

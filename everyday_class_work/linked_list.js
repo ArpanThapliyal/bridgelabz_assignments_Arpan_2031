@@ -40,7 +40,7 @@ class LinkedList {
         temp.next = newNode;
         this.size++;
     }
-    remove(idx){
+    remove(idx = this.size){
         if(idx==1){
             this.head = this.head.next;
         }
@@ -168,7 +168,7 @@ class LinkedList {
 // reverse(ll.head).display();
 
 
-
+module.exports = {LinkedList,node};
 
 
 

@@ -6,12 +6,15 @@ class node{
     }
 }
 
-class binaryTree{
+class binaryTree {
     constructor(){
-        this.root = null; 
+        this.root = null;
     }
     insert(data){
-        if(this.root == null) return new node(data);
+        if(this.root == null) {
+            this.root = new node(data);
+            return;
+        }
         let que = [this.root];
         while(que.length > 0){
             let temp = que.shift();
@@ -32,7 +35,6 @@ class binaryTree{
                 que.push(temp.right);
             }
         } 
-        return this.root;
     }
 
     //traversal
@@ -72,6 +74,66 @@ class binaryTree{
               if(temp.right) que.push(temp.right);
         } 
         return arr;
+    }
+    // Remove function
+    remove(data) {
+        if (this.root == null) return;
+
+        let que = [this.root];
+        let keyNode = null; // Node to delete
+        let parent = null;  // Parent of keyNode
+
+        while (que.length > 0) {
+            let temp = que.shift();
+
+            if (temp.data === data) {
+                keyNode = temp;
+            }
+            if (temp.left) {
+                parent = temp;
+                que.push(temp.left);
+            }
+            if (temp.right) {
+                parent = temp;
+                que.push(temp.right);
+            }
+        }
+
+        // If key node is not found
+        if (!keyNode) {
+            console.log(`Node with value ${data} not found.`);
+            return;
+        }
+
+        // Find the deepest node
+        let que2 = [this.root];
+        let deepestNode = null;
+        while (que2.length > 0) {
+            deepestNode = que2.shift();
+            if (deepestNode.left) que2.push(deepestNode.left);
+            if (deepestNode.right) que2.push(deepestNode.right);
+        }
+
+        // Replace keyNode's data with deepestNode's data
+        keyNode.data = deepestNode.data;
+
+        // Delete the deepest node
+        que2 = [this.root];
+        while (que2.length > 0) {
+            let temp = que2.shift();
+            if (temp.left === deepestNode) {
+                temp.left = null;
+                break;
+            } else if (temp.left) {
+                que2.push(temp.left);
+            }
+            if (temp.right === deepestNode) {
+                temp.right = null;
+                break;
+            } else if (temp.right) {
+                que2.push(temp.right);
+            }
+        }
     }
 }
 

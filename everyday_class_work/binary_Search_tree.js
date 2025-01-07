@@ -77,6 +77,46 @@ class binarySearchTree {
         return arr;
     }
 
+     // Remove function
+     remove(data, node = this.root) {
+        if (node == null) return null;
+
+        // Traverse the tree to find the node to be removed
+        if (data < node.data) {
+            node.left = this.remove(data, node.left);
+        } else if (data > node.data) {
+            node.right = this.remove(data, node.right);
+        } else {
+            // Node to be removed found
+            // Case 1: Node has no children (leaf node)
+            if (node.left == null && node.right == null) {
+                return null;
+            }
+            // Case 2: Node has one child
+            else if (node.left == null) {
+                return node.right;
+            } else if (node.right == null) {
+                return node.left;
+            }
+            // Case 3: Node has two children
+            else {
+                // Find the in-order successor (smallest node in the right subtree)
+                let successor = this.findMin(node.right);
+                node.data = successor.data; // Replace data with successor's data
+                node.right = this.remove(successor.data, node.right); // Remove successor
+            }
+        }
+        return node;
+    }
+
+    // Helper function to find the minimum node in a subtree
+    findMin(node) {
+        while (node.left != null) {
+            node = node.left;
+        }
+        return node;
+    }
+
 }
 
 let tree = new binarySearchTree();

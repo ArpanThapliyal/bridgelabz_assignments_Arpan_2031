@@ -167,7 +167,7 @@ function countDistinctSubsequences(s) {
     return dp[s.length];
 }
 
-console.log(countDistinctSubsequences("abcbac")); // 32
+console.log(countDistinctSubsequences("abcbac")); 
 
 // 1. Dijkstra's Algorithm
 

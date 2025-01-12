@@ -21,10 +21,16 @@
   - queue implementation
 - till `(28-12-2024)`
   - binary tree and binary search tree implementation
-
+- till `(12-1-2025)`
+  - promise
+  - callback
+  - async - await
+  - closures
+  - objects
 ### ASSIGNMENTS :
 - assignment1 `(02-12-2024)`
 - assignment2 `(12-12-2024)`
+- assignment3 `(07-01-2025)`
 
 
 

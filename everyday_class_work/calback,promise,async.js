@@ -60,19 +60,20 @@ ____end___
 // console.log("____end___");   // 3rd
 
 // ____________________________________________________________
-function getdata(data){
-    return new Promise((resolve,reject)=>{
-        setTimeout(()=>{
-            console.log("data",data);
-            resolve(200);
-        },2000);
-    });
-}
-console.log("fetching data...")
-async function solve(){
-    await getdata(1);
-    await getdata(2);
-    await getdata(3);
-    await getdata(4);
-}
-solve();
+// function getdata(data){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             console.log("data",data);
+//             resolve(200);
+//         },2000);
+//     });
+// }
+// console.log("fetching data...")
+// async function solve(){
+//     await getdata(1);
+//     await getdata(2);
+//     await getdata(3);
+//     await getdata(4);
+// }
+// solve();
+

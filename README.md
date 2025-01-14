@@ -27,6 +27,9 @@
   - async - await
   - closures
   - objects
+- till `(14-1-2025)`
+  - html
+  - css
 ### ASSIGNMENTS :
 - assignment1 `(02-12-2024)`
 - assignment2 `(12-12-2024)`
